@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Downloader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Libre+Franklin:wght@100&family=Poppins&family=Proza+Libre&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>
+        Saxy Musician 
+        by @PiyushGolan
+        </h1>
+        <form method="post" autocomplete="off">
+        <input type="text" id="input_data" name="input_data" placeholder="Enter the music URL or the song name" required>
+         
+    
+        <div class="button-container">
+        <input type="submit" id="download_button" value="Download">
+    </div>
+</form>
+        {% if result %}
+        <p>{{ result }}</p>
+        {% endif %}
+        <script>
+        {% if session.download_completed %}
+            // clear the input_data
+            document.querySelector('input[name="input_data"]').value = '';
+
+            // Reload after 2 seconds
+            setTimeout(function() {
+                location.reload();
+            }, 2000); 
+        {% endif %}
+    </script>
+    </div>
+</body>
+</html>

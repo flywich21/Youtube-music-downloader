@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Libre+Franklin:wght@100&family=Poppins&family=Proza+Libre&family=Rubik&display=swap');
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.011);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(25, 212, 222, 0.462);
+    padding: 20px; /* Reduced padding for mobile */
+    max-width: 90%; /* Adjust maximum width for mobile */
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#download_button {
+    
+    background-color: #000000;
+    font-family: Poppins;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    margin-top: 10px; 
+}
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px cyan,
+                0 0 25px cyan, 0 0 40px cyan,
+                0 0 70px cyan, 0 0 120px cyan;
+}
+#download_button:hover {
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+    transform: scale(1.4);
+}
+
+.flash-message {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    opacity: 1; /* Initially visible */
+    transform: translateY(0) scaleY(1); /* Initially positioned at the same level and normal height */
+
+    /* Apply the animation */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+h1:hover {
+    opacity: 1; /* Keep opacity at 1 when hovered */
+
+    /* Slide down effect */
+    transform: translateY(1em) scaleY(0); /* Move down by 1em and hide vertically */
+    transform-origin: top center; /* Move down by 1em */
+}
+
+form {
+    margin-top: 10px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    width: 100%;
+    max-width: 490px; /* Set a maximum width for the input field */
+    padding: 12px; /* Increase padding for mobile */
+    border: none;
+    background-color: rgb(244, 237, 237);
+    border-radius: 15px;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out, color 0.5s ease-in-out;
+    font-size: 16px; /* Increase font size for better readability on mobile */
+}
+
+input[type="text"]:hover {
+    background-color: #b7c6d68b;
+    transform: scale(1.02); /* Slightly scale up on hover */
+    color: #f0f0f0;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover,
+.button:active {
+    background-color: #2980b9;
+}
+
+
+p {
+    margin-top: 10px;
+}
