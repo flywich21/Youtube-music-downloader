@@ -14,3 +14,5 @@ pycryptodomex==3.18.0
 websockets==11.0.3
 Werkzeug==2.3.7
 yt-dlp==2023.7.6
+flask
+yt-dlp
